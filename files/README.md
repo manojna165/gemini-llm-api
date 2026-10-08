@@ -59,3 +59,63 @@ Response:
 | Rate limit or quota exceeded | 429 |
 | Gemini unreachable or returns an error | 502 |
 | Request timeout | 504 |
+
+
+
+
+# Task 3 - Prompt Engineering + Structured Output
+
+This project extends the Gemini LLM API from Task 2 by demonstrating
+prompt engineering and structured LLM output.
+
+## Task 3 Features
+
+- Zero-shot prompting
+- Improved zero-shot prompting
+- Few-shot prompting
+- Structured JSON output
+- Pydantic validation
+- Prompt comparison
+
+## Use Case
+
+Customer review sentiment analysis.
+
+The model classifies a review as:
+
+- positive
+- negative
+- neutral
+
+It also returns:
+
+- confidence score
+- reason for classification
+
+## Prompt Strategies
+
+### 1. Zero-Shot
+
+The model receives the task without examples.
+
+### 2. Improved Zero-Shot
+
+The instructions are made more explicit by defining the allowed
+categories and expected fields.
+
+### 3. Few-Shot
+
+Examples of positive, negative and neutral reviews are provided
+before the actual review.
+
+## Structured Output
+
+Gemini is configured to return JSON according to the following
+Pydantic schema:
+
+```json
+{
+  "sentiment": "positive",
+  "confidence": 0.94,
+  "reason": "The customer is satisfied with the product."
+}
