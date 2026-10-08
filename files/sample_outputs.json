@@ -8,7 +8,7 @@
     },
     "improved_zero_shot": {
       "sentiment": "positive",
-      "confidence": 0.9,
+      "confidence": 0.8,
       "reason": "The review highlights major positive aspects like amazing sound quality and excellent battery life, outweighing the minor discomfort."
     },
     "few_shot": {
@@ -16,7 +16,7 @@
       "confidence": 0.8,
       "reason": "The review highlights major positive features like amazing sound quality and excellent battery life, outweighing the minor drawback of slight discomfort."
     },
-    "observation": "All three prompts correctly classified the review as positive. The improved zero-shot prompt produced the highest confidence score of 0.9."
+    "observation": "All three prompts classified the review as positive with the same confidence of 0.8. The reasoning was nearly identical, and the improved zero-shot reason was the most concise."
   },
 
   "test_case_2": {
@@ -36,11 +36,11 @@
       "confidence": 0.85,
       "reason": "Although the sound quality and battery life are praised, the discomfort, cheap build quality, and hesitation to buy again tilt the overall experience toward negative."
     },
-    "observation": "All three prompts produced the same sentiment and confidence. The more detailed review showed that all three prompting approaches could handle mixed positive and negative feedback."
+    "observation": "All three prompts produced the same sentiment and confidence. Each handled the mixed positive and negative feedback correctly, and improved zero-shot gave the clearest overall verdict."
   },
 
   "overall_comparison": {
     "best_prompt": "Improved Zero-Shot",
-    "reason": "Across the two test cases, all prompts produced the correct sentiment. The improved zero-shot prompt produced the highest confidence in the first test case and maintained the same performance as the other prompts in the second test case."
+    "reason": "All three prompts gave the correct sentiment and identical confidence scores on both test cases, so accuracy did not separate them. Improved zero-shot is preferred because it gave the most concise, clearest reasoning without needing examples, which keeps the prompt shorter and cheaper than few-shot. With only two test cases the difference is small, and more varied reviews would be needed for a firmer conclusion."
   }
 }
